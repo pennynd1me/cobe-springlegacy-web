@@ -7,7 +7,7 @@
 <title>김진현김진현김진현</title>
 </head>
 <body>
-<form action="/input20" method="get">
+<form action="/input20" method="post">
 <input type="submit" value="입장">
 </form>
 </body>
