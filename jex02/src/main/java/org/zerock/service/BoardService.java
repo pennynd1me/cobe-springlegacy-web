@@ -3,6 +3,7 @@ package org.zerock.service;
 import java.util.List;
 
 import org.zerock.domain.BoardVO;
+import org.zerock.domain.WriterCntVO;
 
 public interface BoardService {
 	//글 목록 보기
@@ -15,4 +16,6 @@ public interface BoardService {
 	public boolean modify(BoardVO board);
 	//글 읽기
 	public BoardVO get(int bno);
+	//카운트
+	public List<WriterCntVO> writercnt();
 }

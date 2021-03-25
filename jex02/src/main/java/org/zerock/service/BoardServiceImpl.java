@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 import org.zerock.domain.BoardVO;
+import org.zerock.domain.WriterCntVO;
 import org.zerock.mapper.BoardMapper;
 
 import lombok.AllArgsConstructor;
@@ -37,6 +38,11 @@ public class BoardServiceImpl implements BoardService {
 	@Override
 	public BoardVO get(int bno) {
 		return mapper.read(bno);
+	}
+	
+	@Override
+	public List<WriterCntVO> writercnt() {
+		return mapper.writercnt();
 	}
 
 }

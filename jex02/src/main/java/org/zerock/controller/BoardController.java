@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.zerock.domain.BoardVO;
+import org.zerock.domain.WriterCntVO;
 import org.zerock.service.BoardService;
 
 import lombok.AllArgsConstructor;
@@ -25,6 +26,11 @@ public class BoardController {
 	public void list(Model model) {
 		log.info("list");
 		model.addAttribute("list", service.getList());
+	}
+	
+	@GetMapping("/register")
+	public void registerPage() {
+		//register.jsp  
 	}
 
 	@PostMapping("/register")
@@ -57,6 +63,14 @@ public class BoardController {
 		return "redirect:/board/list";
 	}
 	
+	@RequestMapping("read")
+	public void read(int bno,Model model) {  //글 상세보기
+		model.addAttribute("board", service.get(bno));
+	}
 	
+	@RequestMapping("cnt")
+	public void cnt(WriterCntVO board, Model model) {  //작성 글 보기
+		model.addAttribute("writerCnt", service.writercnt());
+	}
 	
 }

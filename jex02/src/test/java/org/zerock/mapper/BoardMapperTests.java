@@ -61,4 +61,9 @@ public class BoardMapperTests {
 	public void testCount() {
 		log.info("전체글 개수" + mapper.count());
 	}
+	
+	@Test
+	public void testwritercnt() {
+		log.info("작성글 개수 :" + mapper.writercnt());
+	}
 }

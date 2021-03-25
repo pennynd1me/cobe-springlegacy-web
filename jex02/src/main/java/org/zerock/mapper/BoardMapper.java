@@ -3,6 +3,7 @@ package org.zerock.mapper;
 import java.util.List;
 
 import org.zerock.domain.BoardVO;
+import org.zerock.domain.WriterCntVO;
 
 public interface BoardMapper {
 	//글 목록 가져오기
@@ -19,4 +20,6 @@ public interface BoardMapper {
 	public int count();
 	//글 검색
 	public List<BoardVO> searchList();
+	//작성 글 카운트
+	public List<WriterCntVO> writercnt();
 }

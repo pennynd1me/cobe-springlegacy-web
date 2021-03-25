@@ -32,4 +32,10 @@
 	<select id="count" resultType="_int">
 		select count(*) from tbl_board
 	</select>
+	
+	<select id="writercnt" resultType="org.zerock.domain.WriterCntVO">
+	SELECT writer, COUNT(*) cnt
+	FROM tbl_board
+	GROUP BY writer
+	</select>
 </mapper>
